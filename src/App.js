@@ -1,4 +1,6 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
+import Footer from './Components/Footer';
+import Header from './Components/Header';
 
 export default function App() {
     const questions = [
@@ -58,6 +60,7 @@ export default function App() {
     }
     return (
         <div className="app">
+            <Header />
             {showScore ? (
                 <div className="score-section">
                     You scored {score} out of {questions.length}
@@ -90,6 +93,8 @@ export default function App() {
                     </div>
                 </>
             )}
+            <Footer /> 
         </div>
+       
     )
 }
